@@ -1,5 +1,4 @@
 import json
-import ast
 
 ALL_COURSES = ["Medical", "Dental", "Ayurveda"]
 ALL_LEVEL = ["UG", "PG", "DIPLOMA", "Ph.D"]
