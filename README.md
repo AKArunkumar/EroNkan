@@ -1,4 +1,4 @@
-# Studen counseling 
+# Student counseling 
 
 Prerequisites:
 * git clone this repository
