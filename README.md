@@ -1,4 +1,4 @@
-# Studen counsleling Form
+# Student counseling 
 
 Prerequisites:
 * git clone this repository
