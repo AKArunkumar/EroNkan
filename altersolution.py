@@ -41,23 +41,16 @@ def get_application_fee(nation, course_level):
     application_data = data_obj["Application Fee"]
     # comparing user nation if user is INDIA 
     if nation == "INDIA":
-        indain_appl_data = application_data["INDIA"]["ALL_COURSES"]
+        appl_data = application_data["INDIA"]["ALL_COURSES"]
         # conditions for courese levele based on that corresponding fee will be calculated
-        if course_level == "UG":
-            appl_fee = indain_appl_data["UG"]["amount"]
-        elif course_level == "DIPLOMA":
-            appl_fee = indain_appl_data["UG-DIPLOMA"]["amount"]            
-        else:
-            appl_fee = indain_appl_data["PG"]["amount"]
-    # other than INDIA will be foreign users
     else:
-        foreign_appl_data = application_data["FOREIGN"]["ALL_COURSES"]
-        if course_level == "UG":
-            appl_fee = foreign_appl_data["UG"]["amount"]
-        elif course_level == "DIPLOMA":
-            appl_fee = foreign_appl_data["UG-DIPLOMA"]["amount"]            
-        else:
-            appl_fee = foreign_appl_data["PG"]["amount"]
+        appl_data = application_data["FOREIGN"]["ALL_COURSES"]        
+    if course_level == "UG":
+        appl_fee = appl_data["UG"]["amount"]
+    elif course_level == "DIPLOMA":
+        appl_fee = appl_data["UG-DIPLOMA"]["amount"]            
+    else:
+        appl_fee = appl_data["PG"]["amount"]
     return appl_fee      
 
 # defination to print arument set for user selection 
