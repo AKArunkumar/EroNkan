@@ -10,3 +10,7 @@ Run python file
 ```
 python3 counselling.py
 ```
+OR
+```
+python3 altersolution.py
+```
